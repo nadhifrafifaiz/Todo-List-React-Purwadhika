@@ -9,15 +9,15 @@ import TodoItemFunction from './components/TodoItemFunction';
 // -Parent component yang membungkus child component
 
 function App() {
-
+  const kegiatan = "Makan";
 
   return (
     <div>
       <h1>Todo List</h1>
-      <TodoItem />
-      <TodoItem />
+      <TodoItem todoData={{ activity: "Lari", id: 1 }} />
+      <TodoItem todoData={{ activity: "Mandi", id: 2 }} />
 
-      <TodoItemFunction />
+      <TodoItemFunction todoData={{ activity: "Jalan", id: 2 }} />
     </div>
   );
 }

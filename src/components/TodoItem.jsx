@@ -13,7 +13,7 @@ class TodoItem extends React.Component {
     render() {
         return (
             <div className="my-1 d-flex flex-row justify-content-between todo-item-container align-items-center">
-                Makan
+                {this.props.todoData.activity} ID: {this.props.todoData.id}
                 <div>
                     <button onClick={this.deleteButtonHandler} className="btn btn-danger">Delete</button>
                     <button onClick={() => this.btnHandler("COMPLETE")} className="btn btn-success">Complete</button>

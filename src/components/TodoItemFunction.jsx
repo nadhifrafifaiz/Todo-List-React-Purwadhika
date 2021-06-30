@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodoItemFunction = () => {
+const TodoItemFunction = (props) => {
 
     const deleteButtonHandler = () => {
         alert("Terhapus")
@@ -12,7 +12,7 @@ const TodoItemFunction = () => {
 
     return (
         <div className="my-1 d-flex flex-row justify-content-between todo-item-container align-items-center">
-            Makan
+            {props.todoData.activity} ID: {props.todoData.id}
             <div>
                 <button onClick={deleteButtonHandler} className="btn btn-danger">Delete</button>
                 <button onClick={() => btnHandler("COMPLETE")} className="btn btn-success">Complete</button>
